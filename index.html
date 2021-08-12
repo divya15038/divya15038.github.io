@@ -1,9 +1,164 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Resources/CSS/index.css" rel="stylesheet" type="text/css">
+    <title>HTML Cheatsheet</title>
+</head>
 <body>
-  <h1>DIVYA SHARMA</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <h1>HTML & CSS Cheatsheet</h1>
+    <nav>
+        <a href="#Structure">HTML Structure</a>
+        <a href="#Tags">HTML Tags</a>
+        <a href="#TypesCss">Types of CSS</a>
+        <a href="#CSS_Structure">CSS Structure</a>
+        <a href="#CSS_Selectors">CSS Selectors</a>
+    </nav>
+    <section>
+        <article>
+            <h2 id="Structure">Basic Structure of HTML</h2>
+            <p>The basic structure of an HTML document consists of 5 elements:<br>
+                1.<span>The DOCTYPE</span>: A doctype declaration tells the browser what type of document to expect. For example- &lt;!DOCTYPE html&gt; tells the browser that it should expect a HTML5 document.<br>
+                2.<span>HTML</span>: Everything in a html document goes inside the &lt;html&gt; tag.<br>
+                3.<span>HEAD</span>: It is used to store the meta data of a web page. It includes tags like &lt;title&gt; which is used to give title to the web page & is diplayed on the tab bar.<br>
+                4.<span>BODY</span>: Everything that is visible on the webpage including content, images & other media is written under this tag.<br>
+            </p>
+            <h2 id="Tags">HTML Tags</h2>
+            <p>
+                HTML tags are like keywords which defines that how web browser will format and display the content. With the help of tags, a web browser can distinguish between an HTML content and a simple content. HTML tags contain three main parts: opening tag, content and closing tag. But some HTML tags are unclosed tags.
+                <br><br>
+                An HTML file must have some essential tags so that web browser can differentiate between a simple text and HTML text. You can use as many tags you want as per your code requirement.
+                <ul>
+                    <li>All html tags must be enclosed within &lt;&gt; these brackets.</li>
+                    <li>Every tag in html performs different tasks.</li>
+                    <li>Syntax: &lt;tag&gt; content &lt;/tag&gt;</li>
+                </ul>
+                <span style="color:seashell;text-decoration:none">To learn more about different tags, you can visit <a href="https://www.javatpoint.com/html-tags">HTML tags</a></span>
+            </p>
+            <p>Let us take the example of one of the many tags, Table tag.</p>
+            <h3>Table Tag</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>HTML Tags</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;table&gt;</td>
+                        <td>Defines a table</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tr&gt;</td>
+                        <td>Defines a table row</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;td&gt;</td>
+                        <td>Defines a table cell</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;th&gt;</td>
+                        <td>Defines a table header cell</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;thead&gt;</td>
+                        <td>Defines a group of table header</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tbody&gt;</td>
+                        <td>Defines a group of table body</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tfoot&gt;</td>
+                        <td>Defines a group of table footer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <section>
+        <h2 id="TypesCss">Types of CSS</h2>
+        <p>Cascading Style Sheet(CSS) is used to set the style in web pages that contain HTML elements. It sets the background color, font-size, font-family, color, … etc property of elements on a web page. 
+            There are three types of CSS which are given below: </p>
+        <ul>
+            <li>Inline CSS</li>
+            <li>Internal or Embedded CSS</li>
+            <li>External CSS</li>
+        </ul>
+        <p>
+            <span>Inline CSS</span>: Inline CSS contains the CSS property in the body section attached with element is known as inline CSS. This kind of style is specified within an HTML tag using the style attribute. For example: 
+        <p id="Example">
+            &lt;p style = "color:#009900; font-size:50px;
+                font-style:italic; text-align:center;&gt;
+            Hey!There&ltp&gt;
+        </p>
+        </p>
+        <p>
+            <span>Internal or Embedded CSS</span>: This can be used when a single HTML document must be styled uniquely. The CSS rule set should be within the HTML file in the head section i.e the CSS is embedded within the HTML file. Example:
+            <p id="Example">&lt;style&gt;<br>
+                .main {<br>
+                    text-align:center;<br>
+            &lt;/style&gt;
+            </p>  
+        </p>
+        <p>
+            <span>External CSS</span>: External CSS contains separate CSS file which contains only style property with the help of tag attributes (For example class, id, heading, … etc). CSS property written in a separate file with .css extension and should be linked to the HTML document using link tag. This means that for each element, style can be set only once and that will be applied across web pages.
+Example: The file given below contains CSS property. This file save with .css extension. For Ex: geeks.css  
+        </p>
+        <p id="Example">
+            body {<br>
+                background-color:powderblue;<br>
+            }<br>
+            .main {<br>
+                text-align:center;<br>
+            }<br>
+            .GFG {<br>
+                color:#009900;<br>
+                font-size:50px;<br>
+                font-weight:bold;<br>
+            }<br>
+            #geeks {<br>
+                font-style:bold;<br>
+                font-size:20px;<br>
+            }<br>
+        </p>
+        <p>
+            <ul>
+                <li>link tag is used to link the external style sheet with the html webpage.</li>
+                <li>href attribute is used to specify the location of the external style sheet file.</li>
+            </ul>
+        </p>
+    </section>
+    <section>
+        <h2 id="CSS_Structure">CSS Structure</h2>
+        <p>
+            At its most basic level, CSS consists of two components:
+        </p>
+        <ul>
+            <li><span>Properties</span>: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, font-size, width, background-color.</li>
+            <li><span>Values</span>: Each property is assigned a value. This value indicates how to style the property.</li>
+        </ul>
+        <p>The example below highlights a single property and value. The property name is color and the value is blue.</p>
+        <p id="Example">
+            h1 {<br>
+                color: blue;<br>
+            }<br>
+        </p>
+    </section>
+    <section>
+        <h2 id="CSS_Selectors">CSS Selectors</h2>
+        <p>A CSS selector selects the HTML element(s) you want to style.We can divide CSS selectors into five categories:</p>
+        <ul>
+            <li>Simple selectors (select elements based on name, id, class)</li>
+            <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+            <li>Pseudo-class selectors (select elements based on a certain state)</li>
+            <li>Pseudo-elements selectors (select and style a part of an element)</li>
+            <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+        </ul>
+        </ul>
+    </section>
 </body>
- 
 </html>
