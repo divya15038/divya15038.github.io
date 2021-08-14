@@ -93,10 +93,20 @@ table {
     color:#ffffff;
     text-align: center;
     font-size: 20px;
-    width: 1400px;
+    width: 100%;
     border: 2px solid seashell;
     border-collapse: separate;
     border-spacing: 20px;
+}
+
+thead {
+   text-transform: uppercase;
+   font-weight: bold;
+   color: brown;
+   backgroundcolor: aquamarine;
+   font-size: 25px;
+   display: table-header-group;
+   vertical-align: middle;
 }
 
 #Example {
